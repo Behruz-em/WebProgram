@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    color: #1e293b;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    padding: 0 32px;
+    background: #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .nav-logo {
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+  }
+
+  .nav-links a {
+    color: #e2e8f0;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .nav-links a:hover {
+    color: #14b8a6;
+  }
+
+  /* Content to scroll */
+  .content { padding-top: 64px; }
+  .section  { height: 600px; padding: 48px; font-size: 20px; line-height: 1.6; }
+</style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="#" class="nav-logo">WebPro</a>
+    <div class="nav-links">
+      <a href="#s1">Home</a>
+      <a href="#s2">Topics</a>
+      <a href="#s3">Quiz</a>
+    </div>
+  </nav>
+  <div class="content">
+    <div class="section" id="s1" style="background:#f8fafc">Hypertext Markup Language (HTML) is the standard markup language[a] for documents designed to be displayed in a web browser.
+         It defines the content and structure of web content.
+          It is often assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</div>
+    <div class="section" id="s2" style="background:#e2e8f0">CSS is designed to enable the separation of content and presentation, including layout, colors, and fonts.
+        [4] This separation can improve content accessibility, since the content can be written without concern for its presentation; provide more flexibility and
+         control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file,
+          which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.</div>
+    <div class="section" id="s3" style="background:#cbd5e1">Scripting languages such as JavaScript are used to create dynamic and interactive web pages.
+        JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[15] It has dynamic typing, prototype-based object-orientation, and first-class functions. 
+        It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions,
+        standard data structures, and the Document Object Model (DOM).
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<style>
+  :root {
+    /* colours */
+    --primary: #0f766e;
+    --accent: #14b8a6;
+    --bg: #f0fdfa;
+    --surface: #ffffff;
+    --text: #134e4a;
+
+    /* shape and spacing */
+    --radius: 12px;
+    --space-sm: 10px;
+    --space-md: 16px;
+    --space-lg: 20px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #2dd4bf;
+      --accent: #5eead4;
+      --bg: #042f2e;
+      --surface: #0f3f3d;
+      --text: #ccfbf1;
+    }
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    padding: var(--space-lg);
+  }
+
+  .btn {
+    background: var(--primary);
+    color: var(--bg);
+    border: none;
+    border-radius: var(--radius);
+    padding: var(--space-sm) var(--space-lg);
+    cursor: pointer;
+  }
+  .card {
+    background: var(--surface);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius);
+    padding: var(--space-lg);
+    margin-top: var(--space-md);
+  }
+</style>
+</head>
+<body>
+  <button class="btn">Tap here</button>
+  <div class="card">There will be a good content here the next time</div>
+</body>
+</html>

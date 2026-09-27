@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<style>
+  :root {
+    --primary: #0f766e;
+    --accent: #14b8a6;
+    --bg: #f0fdfa;
+    --text: #134e4a;
+    --radius: 12px;
+    --card-bg: #ffffff;
+    --shadow: rgba(20, 184, 166, 0.35);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    padding: 24px;
+  }
+
+  h1 {
+    color: var(--primary);
+    margin-bottom: 24px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: 640px) {
+    .grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 2px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 24px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px var(--shadow);
+  }
+
+  .card[data-icon]::before {
+    content: attr(data-icon);
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary: #2dd4bf;
+      --accent: #5eead4;
+      --bg: #042f2e;
+      --text: #ccfbf1;
+      --card-bg: #0f3f3d;
+      --shadow: rgba(94, 234, 212, 0.3);
+    }
+  }
+</style>
+</head>
+<body>
+   <h1>My Travel Bucket List</h1>
+  <div class="grid">
+    <div class="card" data-icon="🗼">Paris — City of Lights</div>
+    <div class="card" data-icon="🏯">Kyoto — Temples &amp; Gardens</div>
+    <div class="card" data-icon="🌴">Bali — Beaches &amp; Rice Terraces</div>
+    <div class="card" data-icon="🦁">Kenya — Safari Adventures</div>
+    <div class="card" data-icon="🌋">Iceland — Volcanoes &amp; Glaciers</div>
+    <div class="card" data-icon="🗽">New York — The City That Never Sleeps</div>
+  </div>
+</body>
+</html>
