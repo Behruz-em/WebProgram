@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Box Model Visualisation</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+
+    .margin-box {
+      background-color: #fde68a;
+      padding: 30px;
+      text-align: center;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .border-box {
+      background-color: #6b7280;
+      padding: 20px;
+      text-align: center;
+      display: inline-block;
+    }
+    .padding-box {
+      background-color: #bfdbfe;
+      padding: 24px;
+      text-align: center;
+      display: inline-block;
+    }
+    .content-box {
+      background-color: #ddd6fe;
+      padding: 20px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .layer-label {
+      display: block;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="margin-box">
+    <span class="layer-label">Margin</span>
+    <div class="border-box">
+      <span class="layer-label">Border</span>
+      <div class="padding-box">
+        <span class="layer-label">Padding</span>
+        <div class="content-box">
+          <span class="layer-label">Content</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

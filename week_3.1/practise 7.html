@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile Card of Myself</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: sans-serif;
+      background-color: #f3f4f6;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      padding: 32px;
+      width: 280px;
+      text-align: center;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #10B981;
+      color: white;
+      font-size: 1.75rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+    }
+
+    .name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #1e293b;
+    }
+
+    .role {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-top: 4px;
+      margin-bottom: 20px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin-bottom: 20px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    .badge {
+      background-color: #10B981;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: bold;
+      padding: 6px 14px;
+      border-radius: 999px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="avatar">B</div>
+    <h2 class="name">Behruz</h2>
+    <p class="role">Computer Engineering Student, Gachon University</p>
+    <hr>
+    <div class="skills">
+      <span class="badge">HTML</span>
+      <span class="badge">CSS</span>
+      <span class="badge">Python</span>
+      <span class="badge">Cloud</span>
+      <span class="badge">Always Learning</span>
+    </div>
+  </div>
+</body>
+</html>
