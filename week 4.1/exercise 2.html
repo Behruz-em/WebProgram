@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+</head> 
+<html><body style="font-family:system-ui;padding:24px;display:flex;justify-content:center">
+<style>
+    .card {
+      padding: 24px; border-radius: 16px; width: 260px;
+      background: #f0f4ff; border: 2px solid #c8d4f0;
+      text-align: center; transition: all 0.3s;
+    }
+    .card.dark {
+      background: #1a2340; border-color: #3a4a70;
+      color: white;
+    }
+    .avatar {
+      width: 70px; height: 70px; border-radius: 50%;
+      background: #1a56db; display: inline-flex;
+      align-items: center; justify-content: center;
+      font-size: 32px; margin-bottom: 12px;
+    }
+    button { padding: 8px 20px; border-radius: 20px; cursor: pointer; border: none; margin-top: 14px; font-weight: bold; }
+  </style>
+
+  <div id="card" class="card">
+    <div class="avatar">👤</div>
+    <h2>Behruz</h2>
+    <p>Student</p>
+    <button id="toggle-btn"> 🌚Dark Mode</button>
+  </div>
+
+  <script>
+   const card = document.querySelector('#card');
+   const toggleBtn = document.querySelector('#toggle-btn');
+
+toggleBtn.addEventListener('click', () => {
+  card.classList.toggle('dark');
+
+  if (card.classList.contains('dark')) {
+    toggleBtn.textContent = '🌞Light Mode';
+  } else {
+    toggleBtn.textContent = '🌚Dark Mode';
+  }
+});
+  </script>
+</body></html>
