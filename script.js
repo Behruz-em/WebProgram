@@ -11,7 +11,7 @@ const weeks = [
   { number: 3.1, topic: "Week 3.1", tasks: makeTasks("week_3.1", "practise ", 7) },
   { number: 3.2, topic: "Week 3.2", tasks: makeTasks("week_3.2", "exercise_", 7) },
   { number: 4.1, topic: "JavaScript DOM & Events", tasks: makeTasks("week 4.1", "exercise ", 4) },
-  { number: 6, topic: "Random Joke Fetcher", tasks: makeTasks(" build joke app.", ) },
+  { number: 6, topic: "Random Joke Fetcher", tasks: makeTasks("week6", "build joke app. ", 1 ) },
 ];
 
 const weeksBox = document.getElementById("weeks");
