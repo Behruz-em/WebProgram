@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photo Gallery | Web Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="ex3">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Web Hub</a>
+      <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="ex1.html">Countries</a>
+        <a href="ex2.html">Jokes</a>
+        <a href="ex3.html" aria-current="page">Photos</a>
+        <a href="ex4.html">Weather</a>
+        <a href="ex5.html">Anime</a>
+        <a href="ex6.html">Currency</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Photo Gallery</h1>
+    <p class="lead">A gallery of photos from photographers around the world.</p>
+
+    <section>
+      <p id="status" class="status" role="status" hidden></p>
+      <div id="photo-grid" class="photo-grid"></div>
+      <div class="toolbar center">
+        <button id="more-btn" type="button">Load more photos</button>
+      </div>
+    </section>
+
+    <div class="pager">
+      <a href="ex2.html">&larr; Joke Generator</a>
+      <a href="ex4.html">Weather &rarr;</a>
+    </div>
+  </main>
+
+  <footer class="container">Web Programming, Week 7</footer>
+</body>
+</html>

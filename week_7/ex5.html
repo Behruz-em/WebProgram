@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anime Characters | Web Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="ex5">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Web Hub</a>
+      <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="ex1.html">Countries</a>
+        <a href="ex2.html">Jokes</a>
+        <a href="ex3.html">Photos</a>
+        <a href="ex4.html">Weather</a>
+        <a href="ex5.html" aria-current="page">Anime</a>
+        <a href="ex6.html">Currency</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Anime Characters</h1>
+    <p class="lead">Look up a Dragon Ball character to see their details and transformations.</p>
+
+    <section>
+      <p id="status" class="status" role="status" hidden></p>
+      <form id="anime-form" class="toolbar">
+        <label for="anime-input">Character</label>
+        <input id="anime-input" type="text" value="Goku" autocomplete="off">
+        <button type="submit">Search</button>
+        <button id="random-btn" type="button" class="secondary">Random</button>
+      </form>
+      <div id="anime-output"></div>
+    </section>
+
+    <div class="pager">
+      <a href="ex4.html">&larr; Weather</a>
+      <a href="ex6.html">Currency Converter &rarr;</a>
+    </div>
+  </main>
+
+  <footer class="container">Web Programming, Week 7</footer>
+</body>
+</html>

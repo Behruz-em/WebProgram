@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Country Finder | Web Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="ex1">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Web Hub</a>
+      <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="ex1.html" aria-current="page">Countries</a>
+        <a href="ex2.html">Jokes</a>
+        <a href="ex3.html">Photos</a>
+        <a href="ex4.html">Weather</a>
+        <a href="ex5.html">Anime</a>
+        <a href="ex6.html">Currency</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Country Finder</h1>
+    <p class="lead">Search for a country to see its flag and key facts.</p>
+
+    <section>
+      <p id="status" class="status" role="status" hidden></p>
+      <form id="search-form" class="toolbar">
+        <label for="country-input">Country</label>
+        <input id="country-input" type="text" placeholder="For example: Korea" autocomplete="off">
+        <button type="submit">Search</button>
+      </form>
+      <div id="country-list" class="grid">
+        <p class="empty">Search for a country to get started.</p>
+      </div>
+    </section>
+
+    <div class="pager">
+      <a href="index.html">&larr; Home</a>
+      <a href="ex2.html">Joke Generator &rarr;</a>
+    </div>
+  </main>
+
+  <footer class="container">Web Programming, Week 7</footer>
+</body>
+</html>

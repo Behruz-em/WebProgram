@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency Converter | Web Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="ex6">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Web Hub</a>
+      <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="ex1.html">Countries</a>
+        <a href="ex2.html">Jokes</a>
+        <a href="ex3.html">Photos</a>
+        <a href="ex4.html">Weather</a>
+        <a href="ex5.html">Anime</a>
+        <a href="ex6.html" aria-current="page">Currency</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Currency Converter</h1>
+    <p class="lead">Convert between currencies using live exchange rates.</p>
+
+    <section>
+      <p id="status" class="status" role="status" hidden></p>
+      <form id="currency-form" class="toolbar converter-form">
+        <div class="field">
+          <label for="amount">Amount</label>
+          <input id="amount" type="number" min="0" step="any" value="100">
+        </div>
+        <div class="field">
+          <label for="from-currency">From</label>
+          <select id="from-currency"></select>
+        </div>
+        <button id="swap-btn" type="button" class="secondary" aria-label="Swap currencies">Swap</button>
+        <div class="field">
+          <label for="to-currency">To</label>
+          <select id="to-currency"></select>
+        </div>
+        <button type="submit">Convert</button>
+      </form>
+      <div id="currency-output"></div>
+    </section>
+
+    <div class="pager">
+      <a href="ex5.html">&larr; Anime Characters</a>
+      <a href="index.html">Home &rarr;</a>
+    </div>
+  </main>
+
+  <footer class="container">Web Programming, Week 7</footer>
+</body>
+</html>

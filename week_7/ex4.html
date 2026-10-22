@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather | Web Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="ex4">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Web Hub</a>
+      <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="ex1.html">Countries</a>
+        <a href="ex2.html">Jokes</a>
+        <a href="ex3.html">Photos</a>
+        <a href="ex4.html" aria-current="page">Weather</a>
+        <a href="ex5.html">Anime</a>
+        <a href="ex6.html">Currency</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Weather</h1>
+    <p class="lead">Current conditions and a five-day forecast for any city.</p>
+
+    <section>
+      <p id="status" class="status" role="status" hidden></p>
+      <form id="weather-form" class="toolbar">
+        <label for="city-input">City</label>
+        <input id="city-input" type="text" value="Seoul" autocomplete="off">
+        <button type="submit">Get weather</button>
+      </form>
+      <div id="weather-output"></div>
+    </section>
+
+    <div class="pager">
+      <a href="ex3.html">&larr; Photo Gallery</a>
+      <a href="ex5.html">Anime Characters &rarr;</a>
+    </div>
+  </main>
+
+  <footer class="container">Web Programming, Week 7</footer>
+</body>
+</html>

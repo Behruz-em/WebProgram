@@ -1,0 +1,326 @@
+/* ==========================================================
+   Fetch Lab - shared stylesheet for index.html and ex1-ex6
+   ========================================================== */
+
+:root {
+  --bg: #f1f4f8;
+  --surface: #ffffff;
+  --ink: #16212e;
+  --muted: #5a6778;
+  --line: #d8dee7;
+  --accent: #0b6e6e;
+  --accent-dark: #084f4f;
+  --accent-soft: #dff1f0;
+  --error: #a82820;
+  --error-soft: #fbe9e7;
+  --ok: #1b6e38;
+  --ok-soft: #e3f3e8;
+  --wait: #7a5200;
+  --wait-soft: #fcf1d9;
+  --radius: 10px;
+  --font: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  line-height: 1.55;
+}
+
+.container {
+  width: min(960px, 100% - 2rem);
+  margin-inline: auto;
+}
+
+/* ---------- Header / navigation ---------- */
+.site-header {
+  background: var(--ink);
+  color: #fff;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: 0.9rem;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #fff;
+  text-decoration: none;
+}
+.site-header nav {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+}
+.site-header nav a {
+  color: #c9d3df;
+  text-decoration: none;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+.site-header nav a:hover { background: #26354a; color: #fff; }
+.site-header nav a[aria-current="page"] { background: var(--accent); color: #fff; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid #f0b429;
+  outline-offset: 2px;
+}
+
+/* ---------- Page layout ---------- */
+main { padding-block: 2rem 3rem; }
+
+h1 { font-size: 2rem; margin: 0 0 0.4rem; line-height: 1.2; }
+h2 { font-size: 1.25rem; margin: 0 0 0.5rem; }
+h3 { font-size: 1.05rem; margin: 0 0 0.35rem; }
+.lead { color: var(--muted); font-size: 1.1rem; max-width: 62ch; margin: 0 0 1.5rem; }
+
+
+/* ---------- Controls ---------- */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+button, .button {
+  font: inherit;
+  font-weight: 600;
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+}
+button:hover:not(:disabled) { background: var(--accent-dark); }
+button:disabled { opacity: 0.55; cursor: not-allowed; }
+button.secondary {
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+button.secondary:hover:not(:disabled) { background: #e9eef4; }
+
+input[type="text"], input[type="number"], select {
+  font: inherit;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid #aab4c2;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+}
+input[type="text"], input[type="number"] { min-width: min(16rem, 100%); }
+label { font-weight: 600; }
+
+/* ---------- Status messages ---------- */
+.status {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+.status[hidden] { display: none; }
+.status.loading { background: var(--wait-soft); color: var(--wait); }
+.status.loading::before {
+  content: "";
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  margin-right: 0.6em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  vertical-align: -0.1em;
+  animation: spin 0.8s linear infinite;
+}
+.status.error { background: var(--error-soft); color: var(--error); }
+.status.success { background: var(--ok-soft); color: var(--ok); }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Cards and grids ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+}
+.card p { margin: 0.25rem 0 0; color: var(--muted); }
+.card .meta { font-size: 0.9rem; }
+
+.card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.card-link:hover .card { border-color: var(--accent); }
+.card-link h2 { color: var(--accent-dark); }
+
+/* ---------- Exercise-specific bits ---------- */
+.country-flag {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Previous / next ---------- */
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+.pager a { color: var(--accent-dark); font-weight: 600; text-decoration: none; }
+.pager a:hover { text-decoration: underline; }
+
+footer {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 560px) {
+  h1 { font-size: 1.6rem; }
+  .header-inner { gap: 0.5rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .status.loading::before { animation: none; }
+}
+
+/* ---------- Shared extras ---------- */
+.empty { color: var(--muted); }
+.muted { color: var(--muted); font-weight: 400; }
+.center { justify-content: center; margin-top: 1.5rem; }
+
+/* ---------- Jokes ---------- */
+.joke-card { max-width: 640px; margin-bottom: 1.5rem; }
+.joke-setup { font-size: 1.25rem; font-weight: 600; color: var(--ink) !important; margin-bottom: 0.75rem !important; }
+.joke-punchline { font-size: 1.15rem; color: var(--accent-dark) !important; font-weight: 600; margin-bottom: 0.75rem !important; }
+.joke-card [hidden] { display: none; }
+.history-title { margin-top: 1.5rem; }
+.history { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; max-width: 640px; }
+.history[hidden], .history-title[hidden] { display: none; }
+
+/* ---------- Photos ---------- */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+.photo {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  background: #dfe5ec;
+}
+.photo figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.9rem;
+}
+.photo a { color: var(--accent-dark); }
+
+/* ---------- Weather ---------- */
+.weather-now {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+.weather-icon { font-size: 4rem; line-height: 1; }
+.weather-main h2 { margin: 0; text-transform: none; }
+.weather-main p { margin: 0; color: #c9d3df; }
+.weather-main .temp { font-size: 3rem; font-weight: 700; color: #fff; line-height: 1.1; }
+.weather-details { display: flex; gap: 1.5rem; margin: 0 0 0 auto; }
+.weather-details dt { color: #9fb0c3; font-size: 0.85rem; }
+.weather-details dd { margin: 0; font-weight: 600; font-size: 1.1rem; }
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 0.75rem;
+}
+.forecast-day { text-align: center; }
+.forecast-icon { font-size: 2rem; margin: 0.25rem 0 !important; }
+
+/* ---------- Anime characters ---------- */
+.character {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+.character img { width: 220px; max-height: 320px; object-fit: contain; max-width: 100%; }
+.character > div { flex: 1; min-width: 240px; }
+.badges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0; }
+.badge {
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.about { margin-top: 0.9rem !important; max-width: 60ch; }
+.section-title { margin: 1.75rem 0 0.75rem; }
+.ability-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+.ability {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  text-align: center;
+}
+.ability img { width: 100%; height: 130px; object-fit: contain; margin-bottom: 0.4rem; }
+.ability h4 { margin: 0 0 0.2rem; font-size: 0.95rem; }
+.ability .meta { margin: 0; color: var(--muted); font-size: 0.85rem; }
+
+/* ---------- Currency ---------- */
+.converter-form { align-items: flex-end; }
+.field { display: flex; flex-direction: column; gap: 0.3rem; }
+.converter-result { max-width: 520px; }
+.converted { font-size: 2rem; font-weight: 700; color: var(--ink) !important; margin: 0.2rem 0 0.6rem !important; }
+
+@media (max-width: 560px) {
+  .weather-details { margin-left: 0; }
+}

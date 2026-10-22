@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Joke Generator | Web Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body id="ex2">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Web Hub</a>
+      <nav aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="ex1.html">Countries</a>
+        <a href="ex2.html" aria-current="page">Jokes</a>
+        <a href="ex3.html">Photos</a>
+        <a href="ex4.html">Weather</a>
+        <a href="ex5.html">Anime</a>
+        <a href="ex6.html">Currency</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Joke Generator</h1>
+    <p class="lead">Pick a category and get a fresh joke.</p>
+
+    <section>
+      <p id="status" class="status" role="status" hidden></p>
+      <div class="toolbar">
+        <label for="joke-type">Category</label>
+        <select id="joke-type">
+          <option value="any">Any</option>
+          <option value="general">General</option>
+          <option value="programming">Programming</option>
+          <option value="knock-knock">Knock-knock</option>
+        </select>
+        <button id="joke-btn" type="button">New joke</button>
+      </div>
+      <article id="joke-card" class="card joke-card" hidden>
+        <p id="joke-setup" class="joke-setup"></p>
+        <p id="joke-punchline" class="joke-punchline" hidden></p>
+        <button id="reveal-btn" type="button" class="secondary">Show punchline</button>
+      </article>
+      <h2 id="history-title" class="history-title" hidden>Earlier jokes</h2>
+      <ul id="joke-history" class="history"></ul>
+    </section>
+
+    <div class="pager">
+      <a href="ex1.html">&larr; Country Finder</a>
+      <a href="ex3.html">Photo Gallery &rarr;</a>
+    </div>
+  </main>
+
+  <footer class="container">Web Programming, Week 7</footer>
+</body>
+</html>
